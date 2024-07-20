@@ -36,10 +36,82 @@
     </nav>
     <!-- end nav -->
 
-    <section class="container-step1">
+
+    <section class="container-step step1">
+
+        <div class="main-range">
+            <div class="range-container">
+                <input type="range" step="1" min="0" max="5" value="1" id="quiz_steps">
+            </div>
+
+            <p class="range-note">
+                Step 1 of 5
+            </p>
+        </div>
+        <!-- main range -->
+
+        <h2>
+            We'd love to learn about your dog!
+        </h2>
+
+        <div class="form-container form-step1">
+
+        <form action="">
+
+            <div class="fields">
+                <label for="">1. What's your dog's name?</label>
+                
+                <div class="field-input">
+                    <input type="text" placeholder="Type here">
+                </div>
+            </div>
+            <!-- fields -->
+
+            <div class="fields">
+                <label for="">2. What gender is your dog?</label>
+                
+                <div class="field-input">
+                    
+                    <span class="radio-btns">
+                        <label for="dog_gender_male" class="radio-btn active">
+                            <input type="radio" id="dog_gender_male" name="dog_gender" value="Male" checked>
+                            <p>Male</p>
+                        </label>
+    
+                        <label for="dog_gender_female" class="radio-btn ">
+                            <input type="radio" id="dog_gender_female" name="dog_gender" value="Female">
+                            <p>Female</p>
+                        </label>
+                    </span>
+
+                </div>
+            </div>
+            <!-- fields -->
+
+            <div class="fields">
+                <label for="">3. What breed is your dog?</label>
+                
+                <div class="field-input">
+                    <select name="" id="">
+                        <option value="" selected disabled>Choose breed from the dropdown</option>
+                        <option value="">Demo</option>
+                        <option value="">Demo</option>
+                    </select>
+                </div>
+            </div>
+            <!-- fields -->
+
+            <div class="fields submit-btns">
+                <input type="submit" value="next">
+            </div>
+            <!-- fields -->
+
+        </form>
+
+        </div>
         
     </section>
 
 </body>
-
+<script src="/Pet-Strong/src/script/main.js" defer></script>
 </html>

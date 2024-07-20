@@ -3,8 +3,36 @@
 @import "_fonts";
 
 /* Variables for breakpoints */
-$breakpoint-tablet: 768px;
+$breakpoint-mobile: 768px;
 $breakpoint-desktop: 1050px;
+
+
+
+// mixin variables
+@mixin quizSamePro(){
+  color: $white;
+  max-width: 1340px;
+  max-height: 598px;
+  height: 800px;
+  border-radius: 12px;
+  margin: 60px auto;
+  border: 2px solid $black;
+  box-shadow: 2px 4px 0px 0px $black;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+  column-gap: 30px;
+  padding: 66px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+@mixin backgroundImg($bg){
+  background: url($bg) $MidnightBlue;
+}
 
 // universal selector
 * {
@@ -29,7 +57,7 @@ nav {
     margin: auto;
     padding: 5px 0;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-mobile) {
       grid-template-columns: auto auto;
       width: 100%;
       padding: 5px 10px;
@@ -40,7 +68,7 @@ nav {
       justify-content: center;
       align-items: center;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
         justify-content: start;
       }
 
@@ -55,7 +83,7 @@ nav {
       justify-content: center;
       align-items: center;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
         justify-content: end;
       }
 
@@ -68,7 +96,7 @@ nav {
         text-decoration: none;
 
         li {
-          font-family: "Campton", sans-serif;
+          font-family: $Campton;
           font-size: 14px;
           font-weight: 500;
           display: flex;
@@ -97,27 +125,11 @@ nav {
 
 // screen 0
 section.quiz-container {
-  background: url("../../../app/assets/images/screen0-desktop-background.png") $MidnightBlue;
+  @include backgroundImg("../../../app/assets/images/screen0-Desktop-background.png");
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
-  color: $white;
-  max-width: 1340px;
-  max-height: 598px;
-  height: 800px;
-  border-radius: 12px;
-  margin: 60px auto;
-  border: 2px solid $black;
-  box-shadow: 2px 4px 0px 0px $black;
-  display: grid;
-  grid-template-columns: auto auto 1fr;
-  justify-content: start;
-  align-items: start;
-  gap: 0;
-  column-gap: 30px;
-  padding: 66px;
-  position: relative;
-  overflow: hidden;
+  @include quizSamePro();
 
   @media (min-width: $breakpoint-desktop) and (max-width: 1340px) {
     margin: 60px 50px;
@@ -125,21 +137,21 @@ section.quiz-container {
     grid-template-columns: auto auto auto;
   }
 
-  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
     margin: 60px 30px;
     padding: 66px 30px;
     grid-template-columns: auto auto auto;
     column-gap: 10px;
   }
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     grid-template-columns: auto;
     height: auto;
     max-height: none;
     margin: 60px 10px;
     padding: 15px;
-    background: url("../../../app/assets/images/screen0-mobile-background.png")
-      $MidnightBlue;
+    // background: url() $MidnightBlue;
+    @include backgroundImg("../../../app/assets/images/screen0-mobile-background.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -149,7 +161,7 @@ section.quiz-container {
   .quiz-item1 {
     width: 132px;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-mobile) {
       max-width: 280px;
       width: 100%;
       text-align: center;
@@ -160,7 +172,7 @@ section.quiz-container {
       height: 166px;
       margin-top: -35px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
         margin-top: 0;
         width: 75px;
         height: 94px;
@@ -173,7 +185,7 @@ section.quiz-container {
     position: relative;
     z-index: 1;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-mobile) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -186,7 +198,7 @@ section.quiz-container {
       font-size: 34px;
       line-height: 47.6px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
         font-size: 22px;
         line-height: 30.8px;
         text-align: center;
@@ -202,7 +214,7 @@ section.quiz-container {
       position: relative;
       margin-top: 70px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
         margin-top: 40px;
         width: 100%;
       }
@@ -220,7 +232,7 @@ section.quiz-container {
         letter-spacing: 0.04em;
         text-align: center;
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: $breakpoint-mobile) {
           font-size: 18px;
         }
       }
@@ -236,7 +248,7 @@ section.quiz-container {
         border: 2.5px 0px 0px 0px;
         opacity: 0px;
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: $breakpoint-mobile) {
           top: 51%;
           rotate: -30deg;
         }
@@ -271,7 +283,7 @@ section.quiz-container {
           text-transform: capitalize;
           cursor: pointer;
 
-          @media (max-width: $breakpoint-tablet) {
+          @media (max-width: $breakpoint-mobile) {
             font-size: 20px;
             line-height: 24px;
             padding: 10px 0;
@@ -285,7 +297,7 @@ section.quiz-container {
     position: relative;
     z-index: 1;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-mobile) {
       max-width: 280px;
     }
 
@@ -296,7 +308,7 @@ section.quiz-container {
       flex-direction: column;
       row-gap: 14px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
         margin-top: 40px;
         width: 100%;
       }
@@ -310,7 +322,7 @@ section.quiz-container {
         text-align: left;
         margin-top: 5px;
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: $breakpoint-mobile) {
           font-size: 18px;
           line-height: 21.22px;
         }
@@ -321,19 +333,19 @@ section.quiz-container {
         flex-direction: column;
         row-gap: 11px;
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: $breakpoint-mobile) {
           row-gap: 4px;
         }
 
         li {
-          font-family: "Campton", sans-serif;
+          font-family: $Campton;
           font-size: 20px;
           font-weight: 500;
           line-height: 28px;
           text-align: left;
           list-style-position: inside;
 
-          @media (max-width: $breakpoint-tablet) {
+          @media (max-width: $breakpoint-mobile) {
             font-size: 14px;
           }
         }
@@ -348,3 +360,708 @@ section.quiz-container {
 
 
 // screen 1
+section.container-step {
+  width: 100%;
+  text-align: center;
+
+  .main-range {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $breakpoint-mobile){
+      margin-bottom: 15px;
+    }
+
+    .range-container {
+      width: 400px;
+
+      @media (max-width: $breakpoint-mobile){
+        max-width: 400px;
+        width: 80vw;
+      }
+
+      >input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none; 
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        border-radius: 15px;
+        height: 6px;
+        background: #ccc;
+        position: relative;
+        z-index: 2;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none; 
+          height: 36px;
+          width: 39.18px;
+          background-image: url("../../../app/assets/images/step_dog.svg");
+          background-size: cover;
+          border-radius: 50%;
+          border: none;
+            }
+
+        &::-moz-range-thumb {
+          -webkit-appearance: none;
+          appearance: none; 
+          height: 36px;
+          width: 39.18px;
+          background-image: url("../../../app/assets/images/step_dog.svg");
+          background-size: cover;
+          border-radius: 50%;
+          border: none;
+            }
+
+      }
+
+      
+    }
+
+    >p{
+      color: $lightOrange;
+      font-family: $GochiHand;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28.29px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      margin-top: 18px;
+
+      @media (max-width: $breakpoint-mobile){
+        font-size: 18px;
+        line-height: 21.22px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  >h2 {
+    font-family: $Baloo2;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 53.52px;
+    text-align: center;
+    color: $MidnightBlue;
+    margin-bottom: -30px;
+
+    @media (max-width: $breakpoint-mobile){
+      font-size: 22px;
+      line-height: 31.48px;
+    }
+  }
+
+
+  .form-step1,
+  .form-step2{
+    @include backgroundImg("../../../app/assets/images/screen1-desktop-background.png");
+    background-size: 47%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    @include quizSamePro();
+
+    @media (min-width: $breakpoint-desktop) and (max-width: 1340px) {
+      margin: 60px 50px;
+      padding: 66px 30px;
+      grid-template-columns: auto auto auto;
+    }
+  
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+      margin: 60px 30px;
+      padding: 66px 30px;
+      grid-template-columns: auto auto auto;
+      column-gap: 10px;
+    }
+  
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: auto;
+      height: auto;
+      max-height: none;
+      margin: 60px 10px;
+      padding: 15px;
+      padding-bottom: 0;
+      @include backgroundImg("../../../app/assets/images/screen1-mobile-background.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      justify-content: center;
+    }
+
+    form{
+      width: 500px;
+      min-width: 100%;
+
+      @media (max-width: $breakpoint-mobile){
+        padding-top: 30px;
+        max-width: 500px;
+        width: 90vw;
+      }
+
+      .fields{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 25px;
+
+        @media (max-width: $breakpoint-mobile){
+          margin-bottom: 35px;
+        }
+
+        label{
+          font-family: $Campton;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 31.68px;
+          letter-spacing: 0.02em;
+          text-align: center;
+          
+        @media (max-width: $breakpoint-mobile){
+          font-size: 16px;
+          line-height: 21.12px;
+        }
+        }
+
+        .field-input{
+          padding:20px 25px;
+
+          input[type="text"]{
+            width: 100%;
+            background: none;
+            color: $white;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid $white;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.62px;
+            font-family: $Campton;
+
+            @media (max-width: $breakpoint-mobile){
+              font-size: 14px;
+              line-height: 16.3px;
+            }
+
+
+            &::placeholder{
+              color: $white;
+              font-family: $Campton;
+            }
+          }
+
+          .radio-btns{
+            display:flex;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            .radio-btn{
+              background-color: $MidnightBlue;
+              outline: 1px solid $white;
+              border-radius: 40px;
+              padding: 10px 20px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 18.62px;
+              display: flex;
+              gap: 10px;
+              cursor: pointer;
+
+              @media (max-width: $breakpoint-mobile){
+                font-size: 14px;
+                line-height: 16.3px;
+              }
+
+              >input[type="radio"]{
+                width: 22px;
+                height: 22px;
+                accent-color: $MidnightBlue; /* Change this color to your desired accent color */
+                appearance: none; /* Remove default styling */
+                border: 1px solid $white; /* Change this color to your desired border color */
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                margin-right: 0.5em;
+                vertical-align: middle;
+                font-family: $Campton;
+
+                @media (max-width: $breakpoint-mobile){
+                  width: 20px;
+                  height: 20px;
+                }
+
+                &:checked::after{
+                  content: "";
+                  display: block;
+                  width:1em;
+                  height:1em;
+                  background-color: $white; /* Ensure this matches the accent color */
+                  box-shadow:0 0 0 1px $white;
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+
+            .active{
+              background-color: $white;
+              color: $MidnightBlue;
+
+              >input[type="radio"]{
+                accent-color: $MidnightBlue; /* Change this color to your desired accent color */
+                border: 1px solid $MidnightBlue; /* Change this color to your desired border color */
+
+                &:checked::after{
+                  content: "";
+                  background-color: $MidnightBlue; /* Ensure this matches the accent color */
+                  box-shadow:0 0 0 1px $MidnightBlue;
+                }
+              }
+
+            }
+          }
+
+          select{
+            background-color:transparent;
+            color: $white;
+            width: 100%;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid $white;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.62px;
+            cursor: pointer;
+            font-family: $Campton;
+
+            
+            @media (max-width: $breakpoint-mobile){
+              font-size: 14px;
+              line-height: 16.3px;
+            }
+
+            option{
+              color: $MidnightBlue;
+              background-color: $white;
+              font-family: $Campton;
+            }
+          }
+        }
+
+        input[type="submit"],
+        .form-btn{
+          background-color: $lightGreen;
+          color: $white;
+          border: 0;
+          outline: 0;
+          font-family: $Baloo2;
+          font-size: 22px;
+          font-weight: 800;
+          line-height: 30.8px;
+          text-align: center;
+          text-transform: capitalize;
+          padding: 10px 25px;
+          border-radius: 30px;
+          box-shadow: 2px 4px 0px 0px $black;
+          cursor: pointer;
+          margin-top: 10px;
+
+          
+          @media (max-width: $breakpoint-mobile){
+            font-size: 20px;
+           line-height: 24px;
+          }
+
+        }
+
+        .prev{
+          background-color: $white;
+          color: $MidnightBlue;
+          margin-right: 15px;
+        }
+      }
+
+      @media (max-width: $breakpoint-mobile){
+        .submit-btns{
+          text-align: center;
+          margin-top: 220px;
+        }
+      }
+      
+    }
+  }
+
+  .form-step2{
+    @include backgroundImg("../../../app/assets/images/screen2-desktop-background.png");
+    background-size: 28%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-mobile) {
+      @include backgroundImg("../../../app/assets/images/screen2-mobile-background.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom right;
+    }
+
+
+    form{
+
+      .fields{
+
+        .field-input{
+
+          .input-flex{
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+
+            span{
+              position: relative;
+              width: 100%;
+
+              >input[type="text"]{
+                width: 100%;
+                margin: 0;
+                padding-right: 55px;
+              }
+
+              >p{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: auto;
+                height: 100%;
+                display: flex;
+                place-items: center;
+                padding: 5px 5px;
+                font-size: 16px;
+                line-height: 18.62px;
+                font-family: $Campton;
+              }
+
+            }
+          }
+
+
+          .input-flex-select{
+            position: relative;
+            width: 100%;
+
+            select{
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: auto;
+              height:96%;
+              border: none;
+              background-color: $MidnightBlue;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+
+  .customer-review-container{
+    background-color:$white;
+    margin-bottom: 60px;
+
+    .block-flex-column{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      // overflow: hidden;
+
+      @media (max-width: $breakpoint-mobile){
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        height: fit-content;
+        margin-top: -200px;
+        column-gap: 10px;
+      }
+
+    }
+
+    .review-blocks{
+      padding: 15px 20px;
+      max-width: 1340px;
+      width: 100%;
+      margin: auto;
+      display: grid;
+      row-gap: 10px;
+      grid-template-columns: 1fr 2fr;
+
+      @media (min-width: $breakpoint-mobile) and (max-width: 1300px) {
+        grid-template-columns: 1fr;
+      }
+
+      @media (max-width: $breakpoint-mobile){
+        grid-template-columns: 1fr;
+        padding: 15px 10px;
+        height: 600px;
+        overflow: hidden;
+      }
+
+      .block1{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: $breakpoint-mobile){
+          grid-template-columns: repeat(3,1fr);
+          height: fit-content;
+        }
+
+        .icon-with-text-block:nth-child(3){
+
+          @media (min-width: $breakpoint-mobile){
+            grid-column-start: 1;
+            grid-column-end: 3;       
+          }
+        }
+
+        .icon-with-text-block{j
+          
+          img{
+            width: 55.08px;
+            height: 56px;
+
+            @media (max-width: $breakpoint-mobile){
+              width: 43.28px;
+              height:44px;            
+            }
+          }
+
+          >p{
+            color: $MidnightBlue;
+            font-family: $GochiHand;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            line-height: 25.2px;
+
+              @media (max-width: $breakpoint-mobile){
+                font-size: 16px;
+                line-height: 22.4px;           
+              }
+          }
+        }
+      }
+
+      .block2{
+
+        img{
+          width: 221.06px;
+          height: 206.06px;
+          object-fit: contain;
+
+          @media (max-width: $breakpoint-mobile){
+            width: 100%;
+          }
+        }
+      }
+
+      .block3{
+
+        span{
+          display:grid;
+          justify-content: start;
+          align-items: start;
+          grid-template-columns: auto auto;
+          padding: 10px 0;
+
+          @media (max-width: $breakpoint-mobile){
+            position: absolute;
+            bottom: -140px;
+            left: 0;
+            width: 100%;
+            height: 110px;
+          }
+
+          >.icon-smile{
+            width:55.08px;
+            height:56px;
+            margin: 0 5vmin;
+
+            @media (max-width: $breakpoint-mobile){
+              position: absolute;
+              right: 38%;
+              top: 18%;
+              width: 40.93px;
+              height: 41.61px;
+            }
+
+            @media (max-width: 431px){
+              right: 28%;
+            }
+
+            @media (max-width: 345px){
+              right: 18%;
+            }
+
+          }
+
+          >.block3_column{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:100vw;
+            max-width: 150px;
+            position: relative;
+
+            @media (max-width: $breakpoint-mobile){
+              margin-top: -150px;
+              justify-content: end;
+            }
+
+            >b{
+              font-family: $Campton;
+              color: $MidnightBlue;
+              font-weight: 700;
+              font-size: 16px;
+              text-align: center;
+              line-height: 22.4px;
+
+              @media (max-width: $breakpoint-mobile){
+                font-size: 14px;
+                line-height: 19.6px;
+              }
+
+            }
+
+            >p{
+              font-family: $Campton;
+              color: $MidnightBlue;
+              font-weight: 500;
+              font-size: 14px;
+              text-align: center;
+              line-height: 19.6px;
+
+              @media (max-width: $breakpoint-mobile){
+                font-size: 12px;
+                line-height: 16.8px;
+              }
+
+            }
+
+            >.icon-five-star{
+              margin-top: 10px;
+
+              @media (max-width: $breakpoint-mobile){
+                position: absolute;
+                left: 98%;
+                top: -40%;
+              }
+
+              @media (max-width: 547px){
+                left: 70%;
+              }
+
+              @media (max-width: 423px){
+                left: 50%;
+                top: -50%;
+              }
+
+              @media (max-width: 345px){
+                left: 30%;
+                top: -70%;
+              }
+
+              @media (max-width: 291px){
+                left: 15%;
+                top: -70%;
+              }
+
+            }
+
+            >.icon-arrow{
+              width: 44.98px;
+              height: 45.26px;
+              position: absolute;
+              top: 10px;
+              right: -23%;
+
+              @media (max-width: $breakpoint-mobile){
+                transform: rotatex(180deg);
+                width: 35.62px;
+                height: 35.84px;
+                right: -15%;
+                top: 30%;
+              }
+              
+            }
+
+            >.note{
+              color: $MidnightBlue;
+              display: inline-block;
+              position: absolute;
+              right: -90%;
+              top: -15px;
+              font-family:$GochiHand;
+              font-weight: 400;
+              font-size: 20px;
+              letter-spacing: 0.02em;
+              line-height: 23.57px;
+              text-align: center;
+              width: 117px;
+
+              @media (max-width: $breakpoint-mobile){
+                position: absolute;
+                left: 40vmin;
+                top: 60%;
+                width: 100%;
+                height:fit-content;
+                font-size: 16px;
+                line-height: 18.86px;
+              }
+            }
+          }
+        }
+
+        .block-review{
+
+          >h6{
+            font-family: $Baloo2;
+            color: $MidnightBlue;
+            font-weight: 900;
+            font-size: 24px;
+            text-align: center;
+            line-height: 37.78px;
+
+            @media (max-width: $breakpoint-mobile){
+              text-align: left;
+              font-size: 18px;
+              line-height: 28.33px;
+            }
+          }
+
+          >p{
+            font-family:$Campton;
+            color: $MidnightBlue;
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+            line-height: 22.4px;
+
+            @media (max-width: $breakpoint-mobile){
+              text-align: left;
+              font-size: 12px;
+              line-height: 16.8px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

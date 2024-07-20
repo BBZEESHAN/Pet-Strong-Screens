@@ -130,7 +130,7 @@ nav .navigation div.tabs ul li embed {
 }
 
 section.quiz-container {
-  background: url("../../../app/assets/images/screen0-desktop-background.png") #023854;
+  background: url("../../../app/assets/images/screen0-Desktop-background.png") #023854;
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -372,6 +372,703 @@ section.quiz-container .quiz-item3 .report ol li {
 @media (max-width: 768px) {
   section.quiz-container .quiz-item3 .report ol li {
     font-size: 14px;
+  }
+}
+
+section.container-step {
+  width: 100%;
+  text-align: center;
+}
+section.container-step .main-range {
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  section.container-step .main-range {
+    margin-bottom: 15px;
+  }
+}
+section.container-step .main-range .range-container {
+  width: 400px;
+}
+@media (max-width: 768px) {
+  section.container-step .main-range .range-container {
+    max-width: 400px;
+    width: 80vw;
+  }
+}
+section.container-step .main-range .range-container > input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 6px;
+  background: #ccc;
+  position: relative;
+  z-index: 2;
+}
+section.container-step .main-range .range-container > input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 36px;
+  width: 39.18px;
+  background-image: url("../../../app/assets/images/step_dog.svg");
+  background-size: cover;
+  border-radius: 50%;
+  border: none;
+}
+section.container-step .main-range .range-container > input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 36px;
+  width: 39.18px;
+  background-image: url("../../../app/assets/images/step_dog.svg");
+  background-size: cover;
+  border-radius: 50%;
+  border: none;
+}
+section.container-step .main-range > p {
+  color: #E97F16;
+  font-family: "Gochi Hand", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.29px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-top: 18px;
+}
+@media (max-width: 768px) {
+  section.container-step .main-range > p {
+    font-size: 18px;
+    line-height: 21.22px;
+    margin-top: 12px;
+  }
+}
+section.container-step > h2 {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 53.52px;
+  text-align: center;
+  color: #023854;
+  margin-bottom: -30px;
+}
+@media (max-width: 768px) {
+  section.container-step > h2 {
+    font-size: 22px;
+    line-height: 31.48px;
+  }
+}
+section.container-step .form-step1,
+section.container-step .form-step2 {
+  background: url("../../../app/assets/images/screen1-desktop-background.png") #023854;
+  background-size: 47%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  max-width: 1340px;
+  max-height: 598px;
+  height: 800px;
+  border-radius: 12px;
+  margin: 60px auto;
+  border: 2px solid #000000;
+  box-shadow: 2px 4px 0px 0px #000000;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+  column-gap: 30px;
+  padding: 66px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1050px) and (max-width: 1340px) {
+  section.container-step .form-step1,
+  section.container-step .form-step2 {
+    margin: 60px 50px;
+    padding: 66px 30px;
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1050px) {
+  section.container-step .form-step1,
+  section.container-step .form-step2 {
+    margin: 60px 30px;
+    padding: 66px 30px;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1,
+  section.container-step .form-step2 {
+    grid-template-columns: auto;
+    height: auto;
+    max-height: none;
+    margin: 60px 10px;
+    padding: 15px;
+    padding-bottom: 0;
+    background: url("../../../app/assets/images/screen1-mobile-background.png") #023854;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    justify-content: center;
+  }
+}
+section.container-step .form-step1 form,
+section.container-step .form-step2 form {
+  width: 500px;
+  min-width: 100%;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form,
+  section.container-step .form-step2 form {
+    padding-top: 30px;
+    max-width: 500px;
+    width: 90vw;
+  }
+}
+section.container-step .form-step1 form .fields,
+section.container-step .form-step2 form .fields {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .fields,
+  section.container-step .form-step2 form .fields {
+    margin-bottom: 35px;
+  }
+}
+section.container-step .form-step1 form .fields label,
+section.container-step .form-step2 form .fields label {
+  font-family: "Campton", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 31.68px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .fields label,
+  section.container-step .form-step2 form .fields label {
+    font-size: 16px;
+    line-height: 21.12px;
+  }
+}
+section.container-step .form-step1 form .fields .field-input,
+section.container-step .form-step2 form .fields .field-input {
+  padding: 20px 25px;
+}
+section.container-step .form-step1 form .fields .field-input input[type=text],
+section.container-step .form-step2 form .fields .field-input input[type=text] {
+  width: 100%;
+  background: none;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.62px;
+  font-family: "Campton", sans-serif;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .fields .field-input input[type=text],
+  section.container-step .form-step2 form .fields .field-input input[type=text] {
+    font-size: 14px;
+    line-height: 16.3px;
+  }
+}
+section.container-step .form-step1 form .fields .field-input input[type=text]::placeholder,
+section.container-step .form-step2 form .fields .field-input input[type=text]::placeholder {
+  color: #ffffff;
+  font-family: "Campton", sans-serif;
+}
+section.container-step .form-step1 form .fields .field-input .radio-btns,
+section.container-step .form-step2 form .fields .field-input .radio-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+section.container-step .form-step1 form .fields .field-input .radio-btns .radio-btn,
+section.container-step .form-step2 form .fields .field-input .radio-btns .radio-btn {
+  background-color: #023854;
+  outline: 1px solid #ffffff;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.62px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .fields .field-input .radio-btns .radio-btn,
+  section.container-step .form-step2 form .fields .field-input .radio-btns .radio-btn {
+    font-size: 14px;
+    line-height: 16.3px;
+  }
+}
+section.container-step .form-step1 form .fields .field-input .radio-btns .radio-btn > input[type=radio],
+section.container-step .form-step2 form .fields .field-input .radio-btns .radio-btn > input[type=radio] {
+  width: 22px;
+  height: 22px;
+  accent-color: #023854; /* Change this color to your desired accent color */
+  appearance: none; /* Remove default styling */
+  border: 1px solid #ffffff; /* Change this color to your desired border color */
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  font-family: "Campton", sans-serif;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .fields .field-input .radio-btns .radio-btn > input[type=radio],
+  section.container-step .form-step2 form .fields .field-input .radio-btns .radio-btn > input[type=radio] {
+    width: 20px;
+    height: 20px;
+  }
+}
+section.container-step .form-step1 form .fields .field-input .radio-btns .radio-btn > input[type=radio]:checked::after,
+section.container-step .form-step2 form .fields .field-input .radio-btns .radio-btn > input[type=radio]:checked::after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-color: #ffffff; /* Ensure this matches the accent color */
+  box-shadow: 0 0 0 1px #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.container-step .form-step1 form .fields .field-input .radio-btns .active,
+section.container-step .form-step2 form .fields .field-input .radio-btns .active {
+  background-color: #ffffff;
+  color: #023854;
+}
+section.container-step .form-step1 form .fields .field-input .radio-btns .active > input[type=radio],
+section.container-step .form-step2 form .fields .field-input .radio-btns .active > input[type=radio] {
+  accent-color: #023854; /* Change this color to your desired accent color */
+  border: 1px solid #023854; /* Change this color to your desired border color */
+}
+section.container-step .form-step1 form .fields .field-input .radio-btns .active > input[type=radio]:checked::after,
+section.container-step .form-step2 form .fields .field-input .radio-btns .active > input[type=radio]:checked::after {
+  content: "";
+  background-color: #023854; /* Ensure this matches the accent color */
+  box-shadow: 0 0 0 1px #023854;
+}
+section.container-step .form-step1 form .fields .field-input select,
+section.container-step .form-step2 form .fields .field-input select {
+  background-color: transparent;
+  color: #ffffff;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.62px;
+  cursor: pointer;
+  font-family: "Campton", sans-serif;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .fields .field-input select,
+  section.container-step .form-step2 form .fields .field-input select {
+    font-size: 14px;
+    line-height: 16.3px;
+  }
+}
+section.container-step .form-step1 form .fields .field-input select option,
+section.container-step .form-step2 form .fields .field-input select option {
+  color: #023854;
+  background-color: #ffffff;
+  font-family: "Campton", sans-serif;
+}
+section.container-step .form-step1 form .fields input[type=submit],
+section.container-step .form-step1 form .fields .form-btn,
+section.container-step .form-step2 form .fields input[type=submit],
+section.container-step .form-step2 form .fields .form-btn {
+  background-color: #62A544;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 30.8px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 10px 25px;
+  border-radius: 30px;
+  box-shadow: 2px 4px 0px 0px #000000;
+  cursor: pointer;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .fields input[type=submit],
+  section.container-step .form-step1 form .fields .form-btn,
+  section.container-step .form-step2 form .fields input[type=submit],
+  section.container-step .form-step2 form .fields .form-btn {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+section.container-step .form-step1 form .fields .prev,
+section.container-step .form-step2 form .fields .prev {
+  background-color: #ffffff;
+  color: #023854;
+  margin-right: 15px;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step1 form .submit-btns,
+  section.container-step .form-step2 form .submit-btns {
+    text-align: center;
+    margin-top: 220px;
+  }
+}
+section.container-step .form-step2 {
+  background: url("../../../app/assets/images/screen2-desktop-background.png") #023854;
+  background-size: 28%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  section.container-step .form-step2 {
+    background: url("../../../app/assets/images/screen2-mobile-background.png") #023854;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+section.container-step .form-step2 form .fields .field-input .input-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+section.container-step .form-step2 form .fields .field-input .input-flex span {
+  position: relative;
+  width: 100%;
+}
+section.container-step .form-step2 form .fields .field-input .input-flex span > input[type=text] {
+  width: 100%;
+  margin: 0;
+  padding-right: 55px;
+}
+section.container-step .form-step2 form .fields .field-input .input-flex span > p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  display: flex;
+  place-items: center;
+  padding: 5px 5px;
+  font-size: 16px;
+  line-height: 18.62px;
+  font-family: "Campton", sans-serif;
+}
+section.container-step .form-step2 form .fields .field-input .input-flex-select {
+  position: relative;
+  width: 100%;
+}
+section.container-step .form-step2 form .fields .field-input .input-flex-select select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 96%;
+  border: none;
+  background-color: #023854;
+}
+section.container-step .customer-review-container {
+  background-color: #ffffff;
+  margin-bottom: 60px;
+}
+section.container-step .customer-review-container .block-flex-column {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .block-flex-column {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    margin-top: -200px;
+    column-gap: 10px;
+  }
+}
+section.container-step .customer-review-container .review-blocks {
+  padding: 15px 20px;
+  max-width: 1340px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  row-gap: 10px;
+  grid-template-columns: 1fr 2fr;
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+  section.container-step .customer-review-container .review-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks {
+    grid-template-columns: 1fr;
+    padding: 15px 10px;
+    height: 600px;
+    overflow: hidden;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block1 {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block1 {
+    grid-template-columns: repeat(3, 1fr);
+    height: fit-content;
+  }
+}
+@media (min-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block1 .icon-with-text-block:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block1 .icon-with-text-block j img {
+  width: 55.08px;
+  height: 56px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block1 .icon-with-text-block j img {
+    width: 43.28px;
+    height: 44px;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block1 .icon-with-text-block > p {
+  color: #023854;
+  font-family: "Gochi Hand", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  line-height: 25.2px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block1 .icon-with-text-block > p {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block2 img {
+  width: 221.06px;
+  height: 206.06px;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block2 img {
+    width: 100%;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span {
+  display: grid;
+  justify-content: start;
+  align-items: start;
+  grid-template-columns: auto auto;
+  padding: 10px 0;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span {
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    width: 100%;
+    height: 110px;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span > .icon-smile {
+  width: 55.08px;
+  height: 56px;
+  margin: 0 5vmin;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .icon-smile {
+    position: absolute;
+    right: 38%;
+    top: 18%;
+    width: 40.93px;
+    height: 41.61px;
+  }
+}
+@media (max-width: 431px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .icon-smile {
+    right: 28%;
+  }
+}
+@media (max-width: 345px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .icon-smile {
+    right: 18%;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span > .block3_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: 150px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column {
+    margin-top: -150px;
+    justify-content: end;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > b {
+  font-family: "Campton", sans-serif;
+  color: #023854;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  line-height: 22.4px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > b {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > p {
+  font-family: "Campton", sans-serif;
+  color: #023854;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: 19.6px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > p {
+    font-size: 12px;
+    line-height: 16.8px;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-five-star {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-five-star {
+    position: absolute;
+    left: 98%;
+    top: -40%;
+  }
+}
+@media (max-width: 547px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-five-star {
+    left: 70%;
+  }
+}
+@media (max-width: 423px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-five-star {
+    left: 50%;
+    top: -50%;
+  }
+}
+@media (max-width: 345px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-five-star {
+    left: 30%;
+    top: -70%;
+  }
+}
+@media (max-width: 291px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-five-star {
+    left: 15%;
+    top: -70%;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-arrow {
+  width: 44.98px;
+  height: 45.26px;
+  position: absolute;
+  top: 10px;
+  right: -23%;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .icon-arrow {
+    transform: rotatex(180deg);
+    width: 35.62px;
+    height: 35.84px;
+    right: -15%;
+    top: 30%;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .note {
+  color: #023854;
+  display: inline-block;
+  position: absolute;
+  right: -90%;
+  top: -15px;
+  font-family: "Gochi Hand", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 23.57px;
+  text-align: center;
+  width: 117px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 span > .block3_column > .note {
+    position: absolute;
+    left: 40vmin;
+    top: 60%;
+    width: 100%;
+    height: fit-content;
+    font-size: 16px;
+    line-height: 18.86px;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 .block-review > h6 {
+  font-family: "Baloo 2", sans-serif;
+  color: #023854;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  line-height: 37.78px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 .block-review > h6 {
+    text-align: left;
+    font-size: 18px;
+    line-height: 28.33px;
+  }
+}
+section.container-step .customer-review-container .review-blocks .block3 .block-review > p {
+  font-family: "Campton", sans-serif;
+  color: #023854;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  line-height: 22.4px;
+}
+@media (max-width: 768px) {
+  section.container-step .customer-review-container .review-blocks .block3 .block-review > p {
+    text-align: left;
+    font-size: 12px;
+    line-height: 16.8px;
   }
 }
 
