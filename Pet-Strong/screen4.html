@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app\assets\css\main.css">
+    <title>Screen-4</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navigation">
+            <div class="logo">
+                <img src="app/assets/images/pet-strong-logo.png" alt="Pet Strong Logo">
+            </div>
+
+            <div class="tabs">
+                <ul>
+                    <li>
+                        <img src="app/assets/images/circle-star.svg" alt="Rewards Icon">
+                        <a href="#" target="_blank" rel="noopener noreferrer">rewards</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+
+
+    <section class="container-step step4">
+
+        <div class="main-range">
+            <div class="range-container">
+                <input type="range" step="1" min="0" max="5" value="4" id="quiz_steps">
+            </div>
+
+            <p class="range-note">
+                Step 4 of 5
+            </p>
+        </div>
+        <!-- main range -->
+
+        <h2>
+            Tell us something more about your dog’s eating preferences.
+        </h2>
+
+        <div class="form-container form-step4">
+
+        <form action="">
+
+            <div class="fields">
+                <label for="">8. How active is Rufus?</label>
+                
+                <div class="field-input">
+
+                    <span class="radio-btns">
+                        <label for="Active&Ok" class="radio-btn active_rufus">
+                            <input type="radio" id="Active&Ok" name="rufus" value="Active & Ok." checked>
+                            <p>Active &amp; Ok.</p>
+                        </label>
+
+                        <label for="keepcalm" class="radio-btn">
+                            <input type="radio" id="keepcalm" name="rufus" value="Can’t keep calm.">
+                            <p>Can’t keep calm.</p>
+                        </label>
+
+                        <label for="move" class="radio-btn">
+                            <input type="radio" id="move" name="rufus" value="Doesn’t move. It is concerning.">
+                            <p>Doesn’t move. It is concerning.</p>
+                        </label>
+                    </span>
+
+                </div>
+            </div>
+            <!-- fields -->
+
+            <div class="fields">
+                <label for="">9. What is his preference?</label>
+                
+                <div class="field-input">
+
+                    <span class="radio-btns">
+                        <label for="Vegetarian" class="radio-btn">
+                            <input type="radio" id="Vegetarian" name="preference" value="Vegetarian">
+                            <p>Vegetarian</p>
+                        </label>
+
+                        <label for="Non-Vegetarian" class="radio-btn">
+                            <input type="radio" id="Non-Vegetarian" name="preference" value="Non Vegetarian">
+                            <p>Non Vegetarian</p>
+                        </label>
+
+                        <label for="Mixed" class="radio-btn active_preference">
+                            <input type="radio" id="Mixed" name="preference" value="Mixed" checked>
+                            <p>Mixed</p>
+                        </label>
+                    </span>
+
+                </div>
+            </div>
+            <!-- fields -->
+
+            <div class="fields">
+                <label for="">10. Does he have any favorite flavors? <span>You can select multiple options here.</span></label>
+                
+                <div class="field-input">
+
+                    <span class="checkbox-btns">
+                        <label for="Chicken" class="checkbox-btn dog-fav-flavor-active">
+                            <input type="checkbox" id="Chicken" name="flavors" value="Chicken" checked>
+                            <p>Chicken</p>
+                        </label>
+
+                        <label for="fish" class="checkbox-btn">
+                            <input type="checkbox" id="fish" name="flavors" value="fish">
+                            <p>Fish</p>
+                        </label>
+
+                        <label for="lamb" class="checkbox-btn">
+                            <input type="checkbox" id="lamb" name="flavors" value="lamb">
+                            <p>Lamb</p>
+                        </label>
+
+                        <label for="duck" class="checkbox-btn">
+                            <input type="checkbox" id="duck" name="flavors" value="duck">
+                            <p>Duck</p>
+                        </label>
+
+                        <label for="beef" class="checkbox-btn">
+                            <input type="checkbox" id="beef" name="flavors" value="beef">
+                            <p>Beef</p>
+                        </label>
+
+                    </span>
+
+                </div>
+            </div>
+            <!-- fields -->
+
+
+            <div class="fields submit-btns">
+                <input type="button" value="back" class="form-btn prev">
+                <input type="submit" value="next" class="form-btn next">
+            </div>
+            <!-- fields -->
+
+        </form>
+
+        </div>
+        
+    </section>
+
+</body>
+<script src="/Pet-Strong/src/script/main.js" defer></script>
+</html>

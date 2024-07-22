@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app\assets\css\main.css">
+    <title>Screen-3</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navigation">
+            <div class="logo">
+                <img src="app/assets/images/pet-strong-logo.png" alt="Pet Strong Logo">
+            </div>
+
+            <div class="tabs">
+                <ul>
+                    <li>
+                        <img src="app/assets/images/circle-star.svg" alt="Rewards Icon">
+                        <a href="#" target="_blank" rel="noopener noreferrer">rewards</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+
+
+    <section class="container-step step3">
+
+        <div class="main-range">
+            <div class="range-container">
+                <input type="range" step="1" min="0" max="5" value="3" id="quiz_steps">
+                <p class="range-note">
+                    You're almost there!
+                </p>
+            </div>
+
+            <p class="range-note">
+                Step 3 of 5
+            </p>
+        </div>
+        <!-- main range -->
+
+        <h2>
+            Tell us about your dog’s lifestyle &amp; taste preferences.
+        </h2>
+
+        <div class="form-container form-step3">
+
+        <form action="">
+
+            <div class="fields">
+                <label for="">7. What is his Body Condition Score (BCS)?</label>
+                
+                <div class="field-input">
+                    <div class="field-image">
+                        <img src="../Pet-Strong/app/assets/images/screen3-field-score-image.png" alt="" />
+                        <ul>
+                            <li>Very thin</li>
+                            <li>thin</li>
+                            <li class="score-active">ideal</li>
+                            <li>overweight</li>
+                            <li>obese</li>
+                        </ul>
+                    </div>
+
+                    <span class="radio-btns">
+                        <label for="score-1-2" class="radio-btn">
+                            <input type="radio" id="score-1-2" name="dog_score" value="1-2">
+                            <p>1-2</p>
+                        </label>
+    
+                        <label for="score-3-4" class="radio-btn">
+                            <input type="radio" id="score-3-4" name="dog_score" value="3-4">
+                            <p>3-4</p>
+                        </label>
+
+                        <label for="score-5" class="radio-btn active">
+                            <input type="radio" id="score-5" name="dog_score" value="5" checked>
+                            <p>5</p>
+                        </label>
+
+                        <label for="score-6-7" class="radio-btn">
+                            <input type="radio" id="score-6-7" name="dog_score" value="6-7">
+                            <p>6-7</p>
+                        </label>
+
+                        <label for="score-8-9" class="radio-btn">
+                            <input type="radio" id="score-8-9" name="dog_score" value="8-9">
+                            <p>8-9</p>
+                        </label>
+                    </span>
+
+                </div>
+            </div>
+            <!-- fields -->
+
+
+
+            <div class="fields submit-btns">
+                <input type="button" value="back" class="form-btn prev">
+                <input type="submit" value="next" class="form-btn next">
+            </div>
+            <!-- fields -->
+
+        </form>
+
+        </div>
+        
+    </section>
+
+</body>
+<script src="/Pet-Strong/src/script/main.js" defer></script>
+</html>

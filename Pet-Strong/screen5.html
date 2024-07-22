@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app\assets\css\main.css">
+    <title>Screen-5</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navigation">
+            <div class="logo">
+                <img src="app/assets/images/pet-strong-logo.png" alt="Pet Strong Logo">
+            </div>
+
+            <div class="tabs">
+                <ul>
+                    <li>
+                        <img src="app/assets/images/circle-star.svg" alt="Rewards Icon">
+                        <a href="#" target="_blank" rel="noopener noreferrer">rewards</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+
+
+    <section class="container-step step5">
+
+        <div class="main-range">
+            <div class="range-container">
+                <input type="range" step="1" min="0" max="5" value="5" id="quiz_steps">
+                <p class="range-note">
+                    This is the last question!
+                </p>
+            </div>
+
+            <p class="range-note">
+                Step 5 of 5
+            </p>
+        </div>
+        <!-- main range -->
+
+        <h2>
+            Tell us something more about your dog’s eating preferences.
+        </h2>
+
+        <div class="form-container form-step5">
+
+        <form action="">
+
+            <div class="fields">
+                <label for="">11. Lastly, does he have any allergies? <span>You can select multiple options here.</span></label>
+                
+                <div class="field-input">
+                    
+                    <span class="checkbox-btns">
+                        <label for="pumpkin" class="checkbox-btn allergries-active">
+                            <input type="checkbox" id="pumpkin" name="allergies" value="pumpkin" checked>
+                            <p>Pumpkin</p>
+                        </label>
+
+                        <label for="carrot" class="checkbox-btn">
+                            <input type="checkbox" id="carrot" name="allergies" value="carrot">
+                            <p>Carrot</p>
+                        </label>
+
+                        <label for="potato" class="checkbox-btn">
+                            <input type="checkbox" id="potato" name="allergies" value="potato">
+                            <p>Potato</p>
+                        </label>
+
+                        <label for="chicken" class="checkbox-btn">
+                            <input type="checkbox" id="chicken" name="allergies" value="chicken">
+                            <p>Chicken</p>
+                        </label>
+
+                        <label for="egg" class="checkbox-btn">
+                            <input type="checkbox" id="egg" name="allergies" value="egg">
+                            <p>Egg</p>
+                        </label>
+
+                    </span>
+
+                </div>
+            </div>
+            <!-- fields -->
+
+            <div class="fields">
+                <label for="">&nbsp;&nbsp;Any other food items Rufus is allergic to?</label>
+                
+                <div class="field-input ">
+                    <input type="text" placeholder="Type here" style="width: 100%; max-width: 460px;">
+                </div>
+            </div>
+            <!-- fields -->
+
+
+
+            <div class="fields submit-btns">
+                <input type="button" value="back" class="form-btn prev">
+                <span>
+                    <input type="submit" value="Generate report" class="form-btn next">
+                    <p class="arrow-icon-block">
+                        <img src="../Pet-Strong/app/assets/images/screen5-arrow-icon.svg" alt="">
+                        Get a diet for Rufus.
+                    </p>
+                </span>
+            </div>
+            <!-- fields -->
+
+        </form>
+
+        </div>
+        
+    </section>
+
+</body>
+<script src="/Pet-Strong/src/script/main.js" defer></script>
+</html>

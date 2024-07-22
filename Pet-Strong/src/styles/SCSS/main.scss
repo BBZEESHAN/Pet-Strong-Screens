@@ -376,6 +376,7 @@ section.container-step {
 
     .range-container {
       width: 400px;
+      position: relative;
 
       @media (max-width: $breakpoint-mobile){
         max-width: 400px;
@@ -416,6 +417,25 @@ section.container-step {
           border: none;
             }
 
+
+      }
+
+      >.range-note{
+        position: absolute;
+        right: -15px - 106px;
+        top: -10px;
+        width: 110px;
+        font-family: $GochiHand;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        line-height: 21.22px;
+        text-align: center;
+        color: $MidnightBlue;
+
+        @media (max-width: $breakpoint-mobile){
+          display: none;
+        }
       }
 
       
@@ -456,7 +476,10 @@ section.container-step {
 
 
   .form-step1,
-  .form-step2{
+  .form-step2,
+  .form-step3,
+  .form-step4,
+  .form-step5{
     @include backgroundImg("../../../app/assets/images/screen1-desktop-background.png");
     background-size: 47%;
     background-position: bottom right;
@@ -521,6 +544,24 @@ section.container-step {
           font-size: 16px;
           line-height: 21.12px;
         }
+
+        >span{
+          font-family:$GochiHand;
+          font-weight: 400;
+          font-size: 18px;
+          letter-spacing: 0.02em;
+          line-height: 23.76px;
+          text-align: left;
+          color: $BrightYellow;
+
+          @media (max-width: $breakpoint-mobile){
+            font-size: 16px;
+            line-height: 21.12px;
+            letter-spacing: 0.02em;
+            display: block;
+            margin-left: 25px;
+          }
+        }
         }
 
         .field-input{
@@ -551,12 +592,14 @@ section.container-step {
             }
           }
 
-          .radio-btns{
+          .radio-btns,
+          .checkbox-btns{
             display:flex;
             flex-wrap: wrap;
             gap: 15px;
 
-            .radio-btn{
+            .radio-btn,
+            .checkbox-btn{
               background-color: $MidnightBlue;
               outline: 1px solid $white;
               border-radius: 40px;
@@ -565,6 +608,7 @@ section.container-step {
               font-size: 16px;
               line-height: 18.62px;
               display: flex;
+              align-items: center;
               gap: 10px;
               cursor: pointer;
 
@@ -605,9 +649,22 @@ section.container-step {
                   transform: translate(-50%, -50%);
                 }
               }
+
+              >input[type="checkbox"]{
+                width: 17.5px;
+                height: 17.5px;
+
+                &:checked{
+                  accent-color: $MidnightBlue;
+                }
+              }
             }
 
-            .active{
+            .active,
+            .active_rufus,
+            .active_preference,
+            .dog-fav-flavor-active,
+            .allergries-active{
               background-color: $white;
               color: $MidnightBlue;
 
@@ -649,6 +706,63 @@ section.container-step {
               color: $MidnightBlue;
               background-color: $white;
               font-family: $Campton;
+            }
+          }
+
+          >.field-image{
+            background-color: $white;
+            border-radius: 8px;
+            width: 320px;
+            margin-bottom: 35px;
+
+            @media (max-width: $breakpoint-mobile){
+              width: 90vw;
+              max-width: 320px;
+              margin-left: -25px;
+            }
+
+            @media (max-width: 480px){
+              width: 490px;
+              max-width: 90vw;
+            }
+
+            >img{
+              width: 100%;
+            }
+
+            >ul{
+              display: flex;
+              list-style: none;
+              justify-content: space-between;
+              padding: 0 10px;
+
+              li{
+                font-family: $Baloo2;
+                font-weight: 800;
+                font-size: 12px;
+                text-align: left;
+                line-height: 18.89px;
+                padding: 10px 0;
+                text-transform: capitalize;
+                color:$lightOrange;
+
+                &:nth-child(1),
+                &:nth-child(2){
+                  color:$lightOrange;
+                }
+
+                &:nth-child(4),
+                &:nth-child(5){
+                  color:$lightred;
+                }
+              }
+
+              >.score-active{
+                color: $lightGreen !important;
+                text-transform: uppercase;
+                font-size: 14px;
+                scale: 1.4;
+              }
             }
           }
         }
@@ -808,7 +922,7 @@ section.container-step {
       @media (max-width: $breakpoint-mobile){
         grid-template-columns: 1fr;
         padding: 15px 10px;
-        height: 600px;
+        height: 500px;
         overflow: hidden;
       }
 
@@ -1064,4 +1178,153 @@ section.container-step {
       }
     }
   }
+
+  
+// screen 3
+.form-step3{
+  @include backgroundImg("../../../app/assets/images/screen3-desktop-background.png");
+  background-size: 25.1%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include backgroundImg("../../../app/assets/images/screen3-mobile-background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  form{
+    width: 650px;
+    min-width: 100%;
+
+      @media (max-width: $breakpoint-mobile){
+        padding-top: 30px;
+        max-width: 500px;
+        width: 90vw;
+      }
+
+    .submit-btns{
+      margin-top: 100px;
+    }
+  }
 }
+
+// screen 4
+.form-step4{
+  @include backgroundImg("../../../app/assets/images/screen4-desktop-background.png");
+  background-size: 25.1%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include backgroundImg("../../../app/assets/images/screen4-mobile-background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  form{
+    width: 765px;
+    min-width: 100%;
+
+      @media (max-width: $breakpoint-mobile){
+        padding-top: 30px;
+        max-width: 500px;
+        width: 90vw;
+      }
+
+    .submit-btns{
+      margin-top: 20px;
+
+      @media (max-width: $breakpoint-mobile){
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+
+// screen 5
+.form-step5{
+  @include backgroundImg("../../../app/assets/images/screen5-desktop-background.png");
+  background-size: 96%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include backgroundImg("../../../app/assets/images/screen5-mobile-background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  form{
+    width: 765px;
+    min-width: 100%;
+
+      @media (max-width: $breakpoint-mobile){
+        padding-top: 30px;
+        max-width: 500px;
+        width: 90vw;
+      }
+
+    .submit-btns{
+      margin-top: 170px;
+
+      @media (max-width: $breakpoint-mobile){
+        margin-top: 250px;
+        display: flex;
+        justify-content: center;
+      }
+
+      >span{
+        display: inline-block;
+        position: relative;
+        
+        >.arrow-icon-block{
+          position: absolute;
+          right: -190px;
+          top: 20px;
+          font-family:$GochiHand;
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.02em;
+          line-height: 23.57px;
+          text-align: center;
+          color: $BrightYellow;
+
+          @media (max-width: $breakpoint-mobile){
+            right: 5px;
+            top: -40px;
+            width: 218px;
+            font-size: 18px;
+            line-height: 21.22px;
+          }
+
+          >img{
+            width: 36.11px;
+            height: 34.61px;
+            rotate: 10deg;
+            position: relative;
+            top: -20px;
+            right: -30px;
+
+            @media (max-width: $breakpoint-mobile){
+              top: 20px;
+              right:-200px;
+              width: 27.48px;
+              height: 26.27px;
+              // transform: rotateX(100deg) rotateY(180deg);
+              transform: rotate(260deg) rotateX(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+}
+
+
