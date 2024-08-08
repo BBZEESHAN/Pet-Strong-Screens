@@ -1235,7 +1235,7 @@ section.container-step {
       }
 
     .submit-btns{
-      margin-top: 20px;
+      margin-top: -20px;
 
       @media (max-width: $breakpoint-mobile){
         margin-top: 100px;

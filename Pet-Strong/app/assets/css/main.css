@@ -1621,7 +1621,7 @@ section.container-step .form-step4 form {
   }
 }
 section.container-step .form-step4 form .submit-btns {
-  margin-top: 20px;
+  margin-top: -20px;
 }
 @media (max-width: 768px) {
   section.container-step .form-step4 form .submit-btns {
